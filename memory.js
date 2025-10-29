@@ -80,10 +80,6 @@ function checkCards(firstCard, secondCard) {
     firstCard.classList.remove("is--flipped");
     secondCard.classList.remove("is--flipped");
 
-   
-    firstCard.style.pointerEvents = "none";
-    secondCard.style.pointerEvents = "none";
-
     matches++; 
     if (matches === totalPairs) {
       showVictory();
@@ -96,5 +92,25 @@ function checkCards(firstCard, secondCard) {
       secondCard.classList.remove("is--flipped");
     }, duration);
   }
+}
+
+function showVictory() {
+ 
+  if (bestScore === 0 || tries < bestScore) {
+    bestScore = tries;
+    localStorage.setItem("bestScore", bestScore);
+  }
+
+  bestScoreElement.textContent = bestScore;
+
+ 
+  messageElement.innerHTML = `
+    <div class="victory-message">
+      <h1>Bravo 🎉 tu es gagné</h1>
+    </div>
+  `;
+  messageElement.style.color = "green";
+
+ 
 }
 
