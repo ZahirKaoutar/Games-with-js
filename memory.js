@@ -113,4 +113,7 @@ function showVictory() {
 
  
 }
+bestScoreElement.style.color="green";
+  triesElement.style.color="red";
+
 
