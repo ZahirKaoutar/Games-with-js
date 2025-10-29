@@ -42,6 +42,7 @@ function rand(array) {
   }
   return array;
 }
+
 function flipCard(selectedCard) {
   
   if (selectedCard.classList.contains("is--flipped")) return;
@@ -59,4 +60,41 @@ function flipCard(selectedCard) {
   }
 }
 
+function stopFlipping() {
+  container.classList.add("non-click");
+  setTimeout(() => {
+    container.classList.remove("non-click");
+  }, duration);
+}
+
+function checkCards(firstCard, secondCard) {
+
+  tries++;
+  triesElement.textContent = tries;
+
+  if (firstCard.dataset.technology === secondCard.dataset.technology) {
+   
+    firstCard.classList.add("has-match");
+    secondCard.classList.add("has-match");
+
+    firstCard.classList.remove("is--flipped");
+    secondCard.classList.remove("is--flipped");
+
+   
+    firstCard.style.pointerEvents = "none";
+    secondCard.style.pointerEvents = "none";
+
+    matches++; 
+    if (matches === totalPairs) {
+      showVictory();
+    }
+
+  } else {
+    
+    setTimeout(() => {
+      firstCard.classList.remove("is--flipped");
+      secondCard.classList.remove("is--flipped");
+    }, duration);
+  }
+}
 
