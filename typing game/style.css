@@ -1,3 +1,5 @@
+
+
 *{
     padding:0;
     margin:0;
@@ -70,4 +72,65 @@ body{
 span{
     margin-left:6px;
 }
+ 
 
+@media (max-width: 500px) {
+   .container{
+    width:400px;
+    height:300px;
+     border: 2px solid rgb(241, 241, 61);
+    border-radius: 10px;
+    
+   
+  
+
+}
+#txt{
+    color:white;
+    font-size:2vh;
+    text-align: center;
+    margin-bottom:5px;
+
+
+}
+.typing-game{
+    width: 300px;
+    height:100px;
+   border-radius: 10px;
+   position: relative;
+   font-size: 20px;
+   left:30px;
+   top: 20px;
+   
+  
+}
+.controle{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+.score1{
+    color:white;
+    font-size: 20px;
+    position:relative;
+    top:80px;
+    right:0px;
+}
+.time{
+    color:white;
+    font-size: 20px;
+    position:relative;
+    top:100px;
+    left: 200px;
+}
+.btn{
+    background-color: yellow;
+    width:200px;
+    height:50px;
+    color:rgb(0, 0, 43);
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+}
