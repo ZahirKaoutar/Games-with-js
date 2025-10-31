@@ -1,0 +1,73 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    height: 100vh;
+    background-color: rgb(4, 4, 39);
+}
+.container{
+    width:700px;
+    height:600px;
+     border: 2px solid rgb(241, 241, 61);
+    border-radius: 10px;
+    
+   
+  
+
+}
+#txt{
+    color:white;
+    font-size:7vh;
+    text-align: center;
+    margin-bottom:10px;
+
+
+}
+.typing-game{
+    width: 600px;
+    height:200px;
+   border-radius: 10px;
+   position: relative;
+   font-size: 45px;
+   left:60px;
+   top: 40px;
+   
+  
+}
+.controle{
+    display:flex;
+    justify-content: space-around;
+
+}
+.score1{
+    color:white;
+    font-size: 30px;
+    position:relative;
+    top:300px;
+    right:400px;
+}
+.time{
+    color:white;
+    font-size: 30px;
+    position:relative;
+    top:300px;
+    left: 400px;
+}
+.btn{
+    background-color: yellow;
+    width:200px;
+    height:50px;
+    color:rgb(0, 0, 43);
+    font-size: 20px;
+    border-radius: 10px;
+}
+span{
+    margin-left:6px;
+}
+
